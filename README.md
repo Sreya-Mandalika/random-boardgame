@@ -7,6 +7,7 @@ This scraper uncovers the following data about each top 100 board game:
 - Name (+ description)
 - Rating
 - URL
+
 The purpose of this scraper is to generate a random boardgame for people who are looking to try a new boardgame. Since this
 only includes games from the top 100 rankings, it's a perfect way for people to try new and popular games.
 
