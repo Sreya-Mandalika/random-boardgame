@@ -6,7 +6,7 @@ import random
 def scrape_board_games(url):
     response = requests.get(url)
     if response.status_code != 200:
-        print("Failed to retrieve the webpage.")
+        print("Failed to retrieve webpage.")
         return []
 
     soup = BeautifulSoup(response.content, 'html.parser')
@@ -16,7 +16,7 @@ def scrape_board_games(url):
         print("No table found on the page.")
         return []
 
-    rows = games_table.find_all('tr', {'id': 'row_'}) #the rows have ids such as 'row_x'
+    rows = games_table.find_all('tr', {'id': 'row_'}) #the rows have ids such as "row_x"
     games = []
 
     for row in rows:
@@ -40,22 +40,18 @@ def display_random_game(games):
         print("No games available to display.")
         return
 
-    # Select a random game from the list
     random_game = random.choice(games)
-    
-    # Clean up the game's details for better formatting
+
     game_rank = random_game['rank']
-    game_name = " ".join(random_game['name'].split())  # Remove excessive spaces and newlines
+    game_name = " ".join(random_game['name'].split())
     game_rating = random_game['rating'].strip()
     game_url = random_game['url']
 
-    # Display the game in a cleaner format
     print("Board Game Recommendation:")
     print(f"Rank: {game_rank}")
     print(f"Name: {game_name}")
     print(f"Rating: {game_rating}")
     print(f"More Info: {game_url}\n")
-
 
 
 def main():
