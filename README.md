@@ -1,7 +1,7 @@
 # Welcome to the Random Boardgame Generator!
 This project scrapes boardgame data from https://boardgamegeek.com/ and presents a random game from the top 100 boardgames.
 
-## Data and Purpose
+## Data and purpose
 This scraper uncovers the following data about each top 100 board game:
 - Rank
 - Name (+ description)
@@ -17,4 +17,6 @@ and while it does have APIs, they are hard to access and lack proper information
 ideal candidate for webscraping, as it allows users to scrape most of its general pages. 
 
 ## How to use
-How can someone run this (e.g., git clone, pip install -r requirements.txt)
+1. Git clone this repo onto the user's local device
+2. Pip install -r requirements.txt
+3. Run the main.py file - it will generate a random board game. You can run this as many times as you want; it will give you a different board game every time. 
